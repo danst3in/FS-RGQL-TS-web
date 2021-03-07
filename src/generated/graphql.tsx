@@ -38,8 +38,8 @@ export type Post = {
 export type User = {
   __typename?: 'User';
   id: Scalars['Float'];
-  createdAt: Scalars['String'];
-  updatedAt: Scalars['String'];
+  created_at: Scalars['String'];
+  updated_at: Scalars['String'];
   username: Scalars['String'];
 };
 
@@ -110,7 +110,7 @@ export type RegisterMutation = (
       & Pick<FieldError, 'field' | 'message'>
     )>>, user?: Maybe<(
       { __typename?: 'User' }
-      & Pick<User, 'id' | 'createdAt' | 'updatedAt' | 'username'>
+      & Pick<User, 'id' | 'created_at' | 'updated_at' | 'username'>
     )> }
   ) }
 );
@@ -125,8 +125,8 @@ export const RegisterDocument = gql`
     }
     user {
       id
-      createdAt
-      updatedAt
+      created_at
+      updated_at
       username
     }
   }

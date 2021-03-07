@@ -22,8 +22,6 @@ const Login: React.FC<{}> = ({}) => {
           if (response.data?.login.errors) {
             setErrors(toErrorMap(response.data.login.errors));
           } else if (response.data?.login.user) {
-            console.log("router should push");
-
             router.push("/");
           }
           console.log("response.data: ", response.data);
